@@ -1,0 +1,31 @@
+{
+	"schemaVersion": 1,
+	"id": "elixer2",
+	"version": "${version}",
+	"name": "Elixer^2",
+	"description": "Elixirs and Elixers! All the best wares at your disposal!",
+	"authors": [
+		"Xpyz"
+	],
+	"contact": {
+		"homepage": "https://github.com/ArtemisGoddess/",
+		"sources": "https://github.com/ArtemisGoddess/"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/elixer2/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.xpyz.Elixer2"
+		],
+		"client": [
+			"com.xpyz.client.Elixer2Client"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.19.2",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

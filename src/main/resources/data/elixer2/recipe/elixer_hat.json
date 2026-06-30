@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "s": "minecraft:string",
+    "w": "minecraft:pink_wool",
+    "l": "minecraft:lily_of_the_valley",
+    "p": "minecraft:poppy",
+    "d": "minecraft:dandelion"
+  },
+  "pattern": [
+    "sps",
+    "lwd",
+    "w w"
+  ],
+  "result": {
+    "count": 1,
+    "id": "elixer2:elixer_hat"
+  }
+}
