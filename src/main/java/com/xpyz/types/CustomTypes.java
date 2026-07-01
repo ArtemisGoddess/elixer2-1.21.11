@@ -4,23 +4,17 @@ import java.util.Map;
 
 import com.xpyz.Elixer2;
 
-import net.minecraft.item.equipment.ArmorMaterial;
-import net.minecraft.item.equipment.ArmorMaterials;
-import net.minecraft.item.equipment.EquipmentAsset;
-import net.minecraft.item.equipment.EquipmentType;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.tag.ItemTags;
-import net.minecraft.sound.SoundEvents;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.equipment.ArmorMaterial;
+import net.minecraft.world.item.equipment.ArmorMaterials;
+import net.minecraft.world.item.equipment.ArmorType;
+import net.minecraft.world.item.equipment.EquipmentAsset;
+import net.minecraft.world.item.equipment.EquipmentAssets;
 
 public class CustomTypes implements ArmorMaterials {
-    private static RegistryKey<? extends Registry<EquipmentAsset>> REGISTRY_KEY = RegistryKey.ofRegistry(Elixer2.id("equipment_asset")); //WHAT AM I DOINGGGGGG
-    private static RegistryKey<EquipmentAsset> WITCH = register("elixer_hat");
+    private static ResourceKey<EquipmentAsset> REGISTRY_KEY = ResourceKey.create(EquipmentAssets.ROOT_ID, Elixer2.id("elixer_hat")); //WHAT AM I DOINGGGGGG
 
-    public static ArmorMaterial WitchArmorMaterial = new ArmorMaterial(-1, Map.of(EquipmentType.HELMET, 1), 1, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0, 0, ItemTags.REPAIRS_LEATHER_ARMOR, WITCH);
-
-
-    static RegistryKey<EquipmentAsset> register(String name) { //Stolen from EquipmentAssetKeys because I am SO CONFUSED AS ALWAYS
-        return RegistryKey.of(REGISTRY_KEY, Elixer2.id(name));
-    }
+    public static ArmorMaterial WitchArmorMaterial = new ArmorMaterial(-1, Map.of(ArmorType.HELMET, 1), 1, SoundEvents.ARMOR_EQUIP_LEATHER, 0, 0, ItemTags.REPAIRS_LEATHER_ARMOR, REGISTRY_KEY);
 }
