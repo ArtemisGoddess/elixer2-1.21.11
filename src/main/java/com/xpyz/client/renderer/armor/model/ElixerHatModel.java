@@ -5,6 +5,7 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.xpyz.Elixer2;
 import com.xpyz.items.ElixerHatItem;
 
+import com.xpyz.items.ItemInit;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
@@ -310,6 +311,6 @@ public final class ElixerHatModel<S extends HumanoidRenderState> extends Humanoi
 
 	@Override
 	public void setupAnim(S state) {
-
+        armorHead.visible = state.headEquipment.is(ItemInit.ELIXER_HAT);
 	}
 }   

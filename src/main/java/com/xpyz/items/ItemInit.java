@@ -10,13 +10,16 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.equipment.ArmorType;
 
 public class ItemInit {
-    public static final Item ELIXER_HAT = register("elixer_hat", settings -> new ElixerHatItem(settings.humanoidArmor(CustomTypes.WitchArmorMaterial, ArmorType.HELMET)));
+    public static final Item ELIXER_HAT = register("elixer_hat", settings ->
+            new ElixerHatItem(settings.equippable(EquipmentSlot.HEAD)
+                    .attributes(ElixerHatItem.createAttributes())));
 
     public static <T extends Item> T register(String name, Function<Item.Properties, T> itemFactory) {
 		// Create the item key.

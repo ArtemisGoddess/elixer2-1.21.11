@@ -12,11 +12,5 @@ import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 public class Elixer2Client implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
-
-		ArmorRenderer.register(new ElixerHatRenderer.Factory(), ItemInit.ELIXER_HAT);
-
-		EntityModelLayerRegistry.registerModelLayer(ElixerHatModel.LAYER_LOCATION, ElixerHatModel::createBodyLayer);
-
-		
 	}
 }
